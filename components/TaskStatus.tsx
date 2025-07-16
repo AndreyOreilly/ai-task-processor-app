@@ -167,7 +167,7 @@ export default function TaskStatus({
                     Сайт будет доступен через 1-2 минуты после деплоя
                   </p>
                 </div>
-                
+
                 <div className="grid grid-cols-1 gap-3">
                   <a
                     href={result.deployUrls.githubPages}
@@ -185,29 +185,52 @@ export default function TaskStatus({
                       </svg>
                       <div>
                         <div className="font-semibold">GitHub Pages</div>
-                        <div className="text-sm text-gray-300">Основной деплой</div>
+                        <div className="text-sm text-gray-300">
+                          Основной деплой
+                        </div>
                       </div>
                     </div>
                     <div className="flex items-center">
                       <span className="text-sm mr-2">Открыть сайт</span>
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        />
                       </svg>
                     </div>
                   </a>
                 </div>
-                
+
                 <div className="mt-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
                   <div className="flex items-start">
-                    <svg className="w-5 h-5 text-blue-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <svg
+                      className="w-5 h-5 text-blue-500 mr-2 mt-0.5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
                     </svg>
                     <div>
                       <p className="text-sm font-medium text-blue-800">
                         Автоматический деплой активирован
                       </p>
                       <p className="text-xs text-blue-600 mt-1">
-                        GitHub Actions автоматически деплоит ваш сайт. Если сайт не открывается сразу, подождите 1-2 минуты.
+                        GitHub Actions автоматически деплоит ваш сайт. Если сайт
+                        не открывается сразу, подождите 1-2 минуты.
                       </p>
                     </div>
                   </div>
