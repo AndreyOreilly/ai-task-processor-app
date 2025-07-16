@@ -300,8 +300,8 @@ export async function POST(request: NextRequest) {
             }
           });
           console.log('✅ GitHub Pages активирован для', repoName);
-        } catch (pagesError) {
-          console.log('⚠️ Не удалось активировать Pages:', pagesError.message);
+        } catch (pagesError: any) {
+          console.log('⚠️ Не удалось активировать Pages:', pagesError?.message || 'Unknown error');
         }
       } else {
         throw error;
