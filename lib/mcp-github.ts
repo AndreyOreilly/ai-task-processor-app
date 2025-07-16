@@ -96,7 +96,7 @@ export class MCPGitHubService {
       })
 
       return {
-        title: prResult.content?.[0]?.text || 'AI Generated PR',
+        title: `🤖 AI Generated: ${taskDescription.slice(0, 60)}...`,
         description: this.createPullRequestBody(taskDescription, analysis, fileName),
         url: `https://github.com/${process.env.GITHUB_REPO_OWNER}/${process.env.GITHUB_REPO_NAME}/pull/1`,
         branch: 'main',
