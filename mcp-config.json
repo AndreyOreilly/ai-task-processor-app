@@ -1,0 +1,47 @@
+{
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}",
+        "GITHUB_REPO_OWNER": "${GITHUB_REPO_OWNER}",
+        "GITHUB_REPO_NAME": "${GITHUB_REPO_NAME}"
+      }
+    }
+  },
+  "capabilities": {
+    "tools": {
+      "github_create_file": {
+        "description": "Create a new file in GitHub repository",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "owner": { "type": "string" },
+            "repo": { "type": "string" },
+            "path": { "type": "string" },
+            "message": { "type": "string" },
+            "content": { "type": "string" },
+            "branch": { "type": "string" }
+          },
+          "required": ["owner", "repo", "path", "message", "content"]
+        }
+      },
+      "github_create_pull_request": {
+        "description": "Create a new pull request in GitHub repository",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "owner": { "type": "string" },
+            "repo": { "type": "string" },
+            "title": { "type": "string" },
+            "body": { "type": "string" },
+            "head": { "type": "string" },
+            "base": { "type": "string" }
+          },
+          "required": ["owner", "repo", "title", "body", "head", "base"]
+        }
+      }
+    }
+  }
+}
