@@ -42,6 +42,10 @@ export class GigaChatService {
       this.accessToken = response.data.access_token;
       this.tokenExpiry = response.data.expires_at;
 
+      if (!this.accessToken) {
+        throw new Error("Access token is null");
+      }
+
       return this.accessToken;
     } catch (error) {
       console.error("Error getting access token:", error);
