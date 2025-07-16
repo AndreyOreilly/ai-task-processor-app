@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: ai-task-processor
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: GIGACHAT_AUTH_KEY
+        sync: false
+      - key: GITHUB_TOKEN
+        sync: false
+      - key: GITHUB_REPO_OWNER
+        value: AndreyOreilly
+      - key: GITHUB_REPO_NAME
+        value: ai-task-processor-app
